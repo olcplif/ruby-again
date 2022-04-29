@@ -1,11 +1,13 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+<% unless comment.archived? %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %><br>
-  <small><%= comment.created_at %></small>
-  <hr>
-</p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %><br>
+    <small><%= comment.created_at %></small>
+    <hr>
+  </p>
+<% end %>
